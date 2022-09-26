@@ -6,6 +6,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AuthGuard } from './guards/auth.guard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './modules/patient/components/dashboard/dashboard.component';
+import { PatientListComponent } from './modules/admin/components/patient-list/patient-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/mainpage', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/doctor/doctor.module').then((m) => m.Doctor),
   },
-  { path:'dashboard' , component:DashboardComponent}
+  { path:'dashboard' , component:DashboardComponent},
+  { path:'mainpage/admin', component:PatientListComponent },
 ];
 
 @NgModule({

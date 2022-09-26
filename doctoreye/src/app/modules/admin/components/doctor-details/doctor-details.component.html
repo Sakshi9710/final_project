@@ -13,16 +13,10 @@
           {{ currentDoctor.phoneNo}}
         </div>
         <div>
-          <label><strong>Status:</strong></label>
-          {{ currentDoctor.published ? "Published" : "Pending" }}
+    
         </div>
     
-        <a
-          class="badge badge-warning"
-          routerLink="/doctors/{{ currentDoctor.id }}"
-        >
-          Edit
-        </a>
+      
       </div>
     
       <div *ngIf="!currentDoctor">

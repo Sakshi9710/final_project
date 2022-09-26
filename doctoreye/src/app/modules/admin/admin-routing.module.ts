@@ -10,13 +10,14 @@ import { DoctorDetailsComponent } from './components/doctor-details/doctor-detai
 import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
 import { PatientListComponent } from './components/patient-list/patient-list.component';
 import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { DashboardComponent } from '../patient/components/dashboard/dashboard.component'; 
 
 const routes: Routes = [
   {
     path: '',
     component: AdminDashboardComponent,
     children: [
-      { path:'admin' , redirectTo:'home' , pathMatch:'full' },
+      { path:'admin' , component: DoctorsComponent },
       { path: 'home', component: HomeComponent },
       { path: 'add-doctor', component: AddDoctorComponent },
       { path: 'doctors', component: DoctorsComponent },
@@ -26,7 +27,12 @@ const routes: Routes = [
       { path: 'patients/id' , component: PatientDetailsComponent },
       { path: '', redirectTo: 'mainpage/admin/patients', pathMatch: 'full' },
       { path:'patients/home' , redirectTo:'home' , pathMatch:'full' },
-      { path:'./dashboard' , redirectTo:'mainpage/dashboard',pathMatch:"full" }
+      { path:'patients/dashboard', component:DashboardComponent},
+      { path: 'home/add-doctor', component: AddDoctorComponent },
+      { path: 'home/doctors', component: DoctorsComponent },
+      { path: 'home/add-patients', component: AddPatientComponent },
+      { path: 'home/patients', component: PatientListComponent },
+
     ],
   },
 ];

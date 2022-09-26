@@ -3,63 +3,50 @@
     <div *ngIf="currentPatient.id">
           <h4>Patient</h4>
           <div>
-            <label><strong>Incubator No</strong></label> {{ currentPatient.IncubatorNo }}
+            <label><strong>Incubator No : </strong></label> {{ currentPatient.IncubatorNo }}
           </div>
           <div>
-            <label><strong>Patient Name</strong></label>
+            <label><strong>Patient Name : </strong></label>
             {{ currentPatient.PatientName}}
           </div>
           <div>
-            <label><strong>Father Name</strong></label>
+            <label><strong>Father Name : </strong></label>
             {{ currentPatient.FatherName}}
           </div>
           <div>
-            <label><strong>Mother Name</strong></label>
+            <label><strong>Mother Name : </strong></label>
             {{ currentPatient.MotherName}}
           </div>
           <div>
-            <label><strong>Parent ContactNo</strong></label>
+            <label><strong>Parent ContactNo : </strong></label>
             {{ currentPatient.ParentContactNo}}
           </div>
           <div>
-            <label><strong>Patient BloodGroup</strong></label>
+            <label><strong>Patient BloodGroup : </strong></label>
             {{ currentPatient.PatientBloodGroup}}
           </div>
           <div>
-            <label><strong>Patient Diagnosis</strong></label>
+            <label><strong>Patient Diagnosis : </strong></label>
             {{ currentPatient.PatientDiagnosis}}
           </div>
           <div>
-            <label><strong>Patient Precipitation</strong></label>
+            <label><strong>Patient Precipitation : </strong></label>
             {{ currentPatient.PatientPrecipitation}}
           </div>
           <div>
-            <label><strong>Patient Doctor Name</strong></label>
+            <label><strong>Patient Doctor Name : </strong></label>
             {{ currentPatient.PatientDoctorName}}
           </div>
-          <div>
-            <label><strong>Status:</strong></label>
-            {{ currentPatient.published ? "Published" : "Pending" }}
-          </div>
-      
-        <div class="card-body">
-            <a
-            class="badge badge-warning"
-            routerLink="/patients/{{ currentPatient.id }}"
-            >
-              Edit
-            </a>
-        </div>
 
         <div class="card-body">
-           <ul>
+           <!-- <ul>
             <li routerLinkActive="active">
                 <a routerLink="./dashboard">Dashboard
                 </a>
             </li>
-        </ul> 
+        </ul>  -->
     
-         <!-- <a class="btn btn-primary" routerLink="./dashboard">Dashboard</a>      -->
+         <a class="btn btn-primary" routerLink="/dashboard">Dashboard</a>   
       </div>
        
         </div>
